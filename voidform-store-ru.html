@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0b0b">
+<title>VOIDFORM — Вещи для движения</title>
+<style>
+:root{--bg:#0b0b0b;--panel:#151515;--white:#f3f1ec;--muted:#92918d;--line:#30302e;--accent:#d7ff38}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.wrap{width:min(1440px,calc(100% - 48px));margin:auto}.topline{height:30px;background:var(--accent);color:#111;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.header{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;background:#0b0b0beF;backdrop-filter:blur(16px);z-index:20;padding:0 4vw}.logo{font-size:23px;font-weight:950;letter-spacing:-.09em}.nav{display:flex;gap:34px;font-size:11px;text-transform:uppercase;letter-spacing:.12em}.nav a,.header button{transition:color .25s}.nav a:hover,.header button:hover{color:var(--accent)}.cart-open{background:none;color:white;border:0;text-transform:uppercase;letter-spacing:.1em;font-size:11px}.hero{min-height:calc(100svh - 106px);position:relative;display:grid;place-items:center;overflow:hidden;padding:70px 0 90px}.hero:before{content:"";position:absolute;width:min(75vw,850px);aspect-ratio:1;border:1px solid #252523;border-radius:50%;box-shadow:0 0 0 90px #ffffff03,0 0 0 180px #ffffff02}.hero-copy{position:absolute;z-index:2;left:5vw;top:12%;max-width:390px}.eyebrow,.label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}h1{font-size:clamp(56px,10vw,150px);line-height:.78;letter-spacing:-.09em;text-transform:uppercase;margin:22px 0;font-weight:950}.hero-copy p{max-width:280px;color:#aaa;font-size:13px;line-height:1.7}.hero-meta{position:absolute;right:5vw;bottom:12%;text-align:right;font-size:10px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase}.shoe-wrap{width:min(65vw,760px);height:390px;display:grid;place-items:center;perspective:1000px;z-index:1;transform:rotate(-8deg)}.shoe{width:100%;max-width:700px;filter:drop-shadow(0 45px 25px #000);animation:float 5s ease-in-out infinite;transition:transform .2s}.shoe svg{width:100%;overflow:visible}.shoe .sole{fill:#e7e4dc}.shoe .upper{fill:#a8aaa2}.shoe .detail{fill:#282a27}.shoe .lime{fill:var(--accent)}@keyframes float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-18px) rotate(1deg)}}.scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}.scroll:after{content:"";display:block;width:1px;height:30px;background:var(--accent);margin:12px auto 0}.ticker{border-block:1px solid var(--line);padding:18px 0;white-space:nowrap;overflow:hidden;color:var(--accent);font-weight:900;font-size:12px;letter-spacing:.16em}.ticker span{display:inline-block;animation:marquee 25s linear infinite}@keyframes marquee{to{transform:translateX(-50%)}}section{padding:110px 0}.intro{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:end}.intro h2,.section-head h2{font-size:clamp(42px,7vw,94px);line-height:.85;letter-spacing:-.075em;text-transform:uppercase;margin:18px 0 0}.intro p{max-width:440px;color:var(--muted);line-height:1.8;font-size:14px}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:34px}.section-head h2{font-size:clamp(38px,6vw,76px)}.text-link{font-size:10px;text-transform:uppercase;letter-spacing:.15em;border-bottom:1px solid var(--accent);padding-bottom:8px}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.product{min-width:0}.product-image{height:390px;background:#171715;position:relative;overflow:hidden;display:grid;place-items:center}.product-image img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1);mix-blend-mode:normal}.product:hover .product-image img{transform:scale(1.06)}.tag{position:absolute;left:14px;top:14px;background:var(--accent);color:#111;padding:7px 9px;font-size:9px;font-weight:bold;letter-spacing:.1em}.product-info{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line);font-size:12px}.product-info small{display:block;color:var(--muted);margin-top:6px}.product-info strong{font-size:12px}.add{background:none;border:1px solid #555;color:white;padding:9px 12px;font-size:9px;letter-spacing:.1em;text-transform:uppercase;transition:.25s}.add:hover{background:var(--accent);border-color:var(--accent);color:#111}.manifesto{background:var(--accent);color:#101010;padding:90px 5vw}.manifesto .label{color:#333}.manifesto h2{font-size:clamp(48px,10vw,130px);line-height:.8;letter-spacing:-.09em;text-transform:uppercase;margin:35px 0;max-width:1100px}.manifesto p{max-width:420px;line-height:1.7;font-size:13px}.tech-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}.tech{padding:26px 18px 20px 0;border-bottom:1px solid var(--line)}.tech b{color:var(--accent);font-size:10px}.tech h3{font-size:19px;text-transform:uppercase;letter-spacing:-.04em}.tech p{font-size:12px;line-height:1.7;color:var(--muted);max-width:230px}.banner{height:65vh;min-height:360px;background:linear-gradient(90deg,#0008,#0001),url('https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=2000&q=85') center/cover;display:flex;align-items:end;padding:5vw}.banner h2{font-size:clamp(45px,9vw,110px);line-height:.8;letter-spacing:-.08em;text-transform:uppercase;margin:0}.footer{padding:45px 0 30px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:25px;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.12em}.drawer-bg{position:fixed;inset:0;background:#0009;z-index:40;opacity:0;pointer-events:none;transition:.3s}.drawer-bg.open{opacity:1;pointer-events:auto}.drawer{position:fixed;right:0;top:0;height:100%;width:min(440px,100%);background:#111;z-index:41;transform:translateX(105%);transition:transform .4s cubic-bezier(.2,.7,.2,1);padding:28px;display:flex;flex-direction:column}.drawer.open{transform:translateX(0)}.drawer-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:20px}.drawer-head h2{font-size:18px;text-transform:uppercase}.close{background:none;border:0;color:white;font-size:25px}.cart-items{overflow:auto;flex:1}.cart-row{display:grid;grid-template-columns:82px 1fr auto;gap:14px;padding:18px 0;border-bottom:1px solid var(--line);font-size:12px}.cart-row img{width:82px;height:90px;object-fit:cover;background:#222}.cart-row small{display:block;color:var(--muted);margin-top:7px}.qty{display:flex;align-items:center;gap:10px;margin-top:12px}.qty button{background:none;border:1px solid #555;color:white;width:24px;height:24px}.cart-bottom{border-top:1px solid var(--line);padding-top:20px}.total{display:flex;justify-content:space-between;font-size:14px;margin-bottom:20px}.checkout{width:100%;border:0;background:var(--accent);color:#111;padding:17px;font-weight:bold;font-size:10px;letter-spacing:.15em;text-transform:uppercase}.empty{color:var(--muted);font-size:13px;padding:30px 0}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);background:var(--accent);color:#111;padding:13px 18px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;opacity:0;transition:.3s;z-index:60}.toast.show{opacity:1;transform:translate(-50%,0)}.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}.reveal.visible{opacity:1;transform:none}
+@media(max-width:760px){.wrap{width:calc(100% - 32px)}.header{height:64px;padding:0 16px}.nav{display:none}.hero{min-height:calc(88svh - 64px);padding:40px 0}.hero-copy{left:18px;top:9%;max-width:250px}.hero-copy p{font-size:11px}.shoe-wrap{width:112vw;height:270px;margin-top:50px}.hero-meta{right:18px;bottom:12%;font-size:8px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 10px}.product-image{height:clamp(180px,57vw,330px)}.product-info{font-size:10px;gap:8px}.product-info strong{font-size:10px}.add{padding:8px;font-size:8px}.intro{grid-template-columns:1fr;gap:25px}.intro h2,.section-head h2{font-size:clamp(43px,13vw,70px)}section{padding:75px 0}.tech-grid{grid-template-columns:repeat(2,1fr);gap:0 18px}.tech{padding:20px 0}.manifesto{padding:70px 18px}.banner{height:55vh;padding:20px}.footer{flex-wrap:wrap}.hero:before{width:100vw}.scroll{bottom:18px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="topline">ДРОП 01 — ОГРАНИЧЕННЫЙ ТИРАЖ / ДОСТАВКА ПО ВСЕМУ МИРУ</div>
+<header class="header">
+  <a class="logo" href="#">VOIDFORM<span style="color:var(--accent)">.</span></a>
+  <nav class="nav"><a href="#shop">Каталог</a><a href="#philosophy">Философия</a><a href="#materials">Материалы</a></nav>
+  <button class="cart-open" onclick="openCart()">Корзина (<span id="cart-count">0</span>) ↗</button>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy reveal">
+      <div class="eyebrow">01 / Форма следует за функцией</div>
+      <h1>Двигайся<br>по-своему.</h1>
+      <p>Вещи для движения. Продуманные элементы гардероба на границе функциональности и минимализма.</p>
+      <a class="text-link" href="#shop">Смотреть коллекцию ↗</a>
+    </div>
+    <div class="shoe-wrap" id="shoe-wrap" aria-label="Иллюстрация кроссовка">
+      <div class="shoe">
+        <svg viewBox="0 0 900 430" role="img" aria-label="Концептуальный кроссовок VOIDFORM">
+          <path class="sole" d="M80 290 Q150 320 250 310 L440 292 Q530 280 620 305 L790 330 Q850 340 850 375 Q850 400 810 404 L170 404 Q70 400 50 370 Q35 340 80 290Z"/>
+          <path class="upper" d="M100 285 Q155 245 220 180 Q270 125 355 145 L500 205 Q565 230 620 250 L770 290 Q830 310 850 350 L770 365 L140 360 Q75 350 100 285Z"/>
+          <path class="detail" d="M225 210 Q300 140 365 167 L505 220 L470 250 L340 210 L265 265Z"/>
+          <path class="lime" d="M490 236 L625 278 L595 304 L460 263Z"/>
+          <path fill="none" stroke="#20221f" stroke-width="12" stroke-linecap="round" d="M310 188 L455 254 M295 211 L442 275 M280 235 L428 295 M265 258 L414 314"/>
+          <path fill="none" stroke="#e7e4dc" stroke-width="5" d="M130 330 Q360 350 570 328 T820 354"/>
+          <path class="detail" d="M660 270 L770 300 L735 319 L640 293Z"/>
+          <path fill="none" stroke="#f3f1ec" stroke-width="3" d="M180 280 L250 210 M205 295 L275 225"/>
+          <text x="570" y="355" fill="#111" font-size="17" font-weight="900" letter-spacing="5">VF—01</text>
+        </svg>
+      </div>
+    </div>
+    <div class="hero-meta">VF—01 / Кроссовок новой формы<br>Создан для неизведанного</div>
+    <div class="scroll">Прокрути, чтобы узнать больше</div>
+  </section>
+  <div class="ticker"><span>VOIDFORM — СОЗДАНО ДЛЯ ДВИЖЕНИЯ — ДРОП 01 — VOIDFORM — СОЗДАНО ДЛЯ ДВИЖЕНИЯ — ДРОП 01 — </span></div>
+  <section class="wrap intro reveal" id="philosophy">
+    <div><div class="label">01 / Философия</div><h2>Меньше шума.<br>Больше смысла.</h2></div>
+    <p>Мы создаём вещи без лишнего. Чистые силуэты, функциональные материалы и ограниченные тиражи. Каждая деталь существует по причине — ничего случайного, ничего лишнего.</p>
+  </section>
+  <section class="wrap" id="shop">
+    <div class="section-head reveal"><div><div class="label">02 / Коллекция</div><h2>Избранные модели</h2></div><a class="text-link" href="#shop">Смотреть всё ↗</a></div>
+    <div class="products" id="products"></div>
+  </section>
+  <section class="manifesto reveal">
+    <div class="label">03 / Ограниченный выпуск</div>
+    <h2>Создано,<br>чтобы двигаться иначе.</h2>
+    <p>Дроп 01 — исследование движения, материалов и пропорций. Ограниченная коллекция для тех, кто выходит за рамки привычного.</p>
+  </section>
+  <section class="wrap" id="materials">
+    <div class="section-head reveal"><div><div class="label">04 / Технологии материалов</div><h2>Важна каждая деталь.</h2></div></div>
+    <div class="tech-grid">
+      <article class="tech reveal"><b>01 / ТЕКСТИЛЬ</b><h3>Переработанный материал</h3><p>Лёгкий материал с высокой износостойкостью и продуманной фактурой.</p></article>
+      <article class="tech reveal"><b>02 / КОМФОРТ</b><h3>Двойная плотность</h3><p>Два уровня плотности для баланса мягкости и устойчивости.</p></article>
+      <article class="tech reveal"><b>03 / КОНСТРУКЦИЯ</b><h3>Адаптивная посадка</h3><p>Конструкция, которая поддерживает движение и не ограничивает его.</p></article>
+      <article class="tech reveal"><b>04 / ОТДЕЛКА</b><h3>Создано надолго</h3><p>Внимание к швам, соединениям и деталям, которые выдерживают ежедневное использование.</p></article>
+    </div>
+  </section>
+  <div class="banner"><h2>За пределами<br>обычного.</h2></div>
+</main>
+<footer class="footer wrap"><a class="logo" href="#">VOIDFORM.</a><span>© 2026 СТУДИЯ VOIDFORM</span><span>Instagram&nbsp;&nbsp; / &nbsp;&nbsp;Контакты&nbsp;&nbsp; / &nbsp;&nbsp;Доставка</span></footer>
+<div class="drawer-bg" id="drawer-bg" onclick="closeCart()"></div>
+<aside class="drawer" id="drawer" aria-label="Каталогping cart">
+  <div class="drawer-head"><h2>Ваша корзина / <span id="drawer-count">0</span></h2><button class="close" onclick="closeCart()" aria-label="Закрыть корзину">×</button></div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-bottom"><div class="total"><span>Итого</span><strong id="cart-total">$0</strong></div><button class="checkout" onclick="checkout()">Перейти к оформлению ↗</button><p style="color:#777;font-size:10px;line-height:1.6">Демонстрационная версия. Реальные оплата и доставка подключаются отдельно.</p></div>
+</aside>
+<div class="toast" id="toast">Добавлено в корзину</div>
+<script>
+const products=[
+ {id:1,name:"Кроссовки VF—01",cat:"Обувь / 001",price:180,size:"40–45",img:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85",tag:"ЛИМИТИРОВАННЫЙ ТИРАЖ"},
+ {id:2,name:"Плотное худи Form",cat:"Одежда / 002",price:120,size:"S–XL",img:"https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=900&q=85",tag:"НОВИНКА"},
+ {id:3,name:"Утилитарная куртка Structure",cat:"Верхняя одежда / 003",price:240,size:"S–XL",img:"https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=900&q=85",tag:"ДРОП 01"},
+ {id:4,name:"Футболка Essential Box",cat:"Одежда / 004",price:65,size:"S–XXL",img:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85",tag:"БАЗОВАЯ МОДЕЛЬ"},
+ {id:5,name:"Брюки Signal",cat:"Одежда / 005",price:110,size:"S–XL",img:"https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=900&q=85",tag:"НОВИНКА"},
+ {id:6,name:"Сумка через плечо Object",cat:"Аксессуары / 006",price:85,size:"ЕДИНЫЙ РАЗМЕР",img:"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85",tag:"ЛИМИТИРОВАННЫЙ ТИРАЖ"}
+];
+let cart=JSON.parse(localStorage.getItem("vf-cart")||"[]");
+const money=n=>"$"+n.toFixed(2);
+function renderProducts(){document.getElementById("products").innerHTML=products.map(p=>`<article class="product reveal"><div class="product-image"><span class="tag">${p.tag}</span><img src="${p.img}" alt="${p.name}" loading="lazy"></div><div class="product-info"><div>${p.name}<small>${p.cat} · ${p.size}</small></div><div style="text-align:right"><strong>${money(p.price)}</strong><br><button class="add" onclick="addToCart(${p.id})">Добавить +</button></div></div></article>`).join("");observeReveals()}
+function addToCart(id){let item=cart.find(x=>x.id===id);if(item)item.qty++;else cart.push({id,qty:1});save();toast("Добавлено в корзину")}
+function save(){localStorage.setItem("vf-cart",JSON.stringify(cart));renderCart()}
+function renderCart(){let count=cart.reduce((s,x)=>s+x.qty,0),total=cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0);document.getElementById("cart-count").textContent=count;document.getElementById("drawer-count").textContent=count;document.getElementById("cart-total").textContent=money(total);let el=document.getElementById("cart-items");el.innerHTML=cart.length?cart.map(x=>{let p=products.find(p=>p.id===x.id);return `<div class="cart-row"><img src="${p.img}" alt=""><div>${p.name}<small>${money(p.price)} · ${p.size}</small><div class="qty"><button onclick="changeQty(${p.id},-1)">−</button><span>${x.qty}</span><button onclick="changeQty(${p.id},1)">+</button></div></div><strong>${money(p.price*x.qty)}</strong></div>`}).join(""):'<p class="empty">В корзине пока пусто.</p>'}
+function changeQty(id,d){let x=cart.find(x=>x.id===id);if(x){x.qty+=d;if(x.qty<=0)cart=cart.filter(y=>y.id!==id)}save()}
+function openCart(){document.getElementById("drawer").classList.add("open");document.getElementById("drawer-bg").classList.add("open")}
+function closeCart(){document.getElementById("drawer").classList.remove("open");document.getElementById("drawer-bg").classList.remove("open")}
+function checkout(){alert("Это демонстрационная версия. Для оформления настоящего заказа нужны сервер, база данных и платёжный провайдер.");}
+let toastTimer;function toast(t){let e=document.getElementById("toast");e.textContent=t;e.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>e.classList.remove("show"),1800)}
+function observeReveals(){let io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll(".reveal:not(.visible)").forEach(el=>io.observe(el))}
+const shoe=document.getElementById("shoe-wrap");if(matchMedia("(pointer:fine)").matches){document.addEventListener("pointermove",e=>{let x=(e.clientX/innerWidth-.5)*12,y=(e.clientY/innerHeight-.5)*-8;shoe.style.transform=`rotate(-8deg) rotateY(${x}deg) rotateX(${y}deg)`})}
+renderProducts();renderCart();observeReveals();
+</script>
+</body>
+</html>
